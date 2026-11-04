@@ -1,0 +1,36 @@
+description: Padrões de CSS e estilização para o ClickTree
+globs: public/css/**/*.css
+alwaysApply: false
+
+# CSS - ClickTree
+
+## 1. Objetivo
+Padronizar os estilos visuais do portal ClickTree, garantindo consistência, responsividade e conformidade com os requisitos do projeto.
+
+## 2. Contexto do projeto
+- Abordagem mobile-first com uso de variáveis globais em `:root`.
+- Arquivos de estilo localizados na pasta correspondente do projeto.
+
+## 3. Regras detalhadas
+- Utilize seletores limpos e utilize as variáveis definidas no `:root`.
+- Garanta que todos os elementos interativos possuam um estado de foco visível.
+- Mantenha a compatibilidade com a estrutura de responsividade do site.
+
+## 4. Exemplo
+/* Trecho mínimo adaptado para a estilização do ClickTree */
+:root {
+  --cor-primaria: #2E7D32;
+  --cor-texto: #333333;
+}
+
+.botao--primario {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+## 5. Erros a evitar
+- Não utilize valores fixos de cores ou espaçamentos quando houver variáveis disponíveis.
+- Evite aninhamentos excessivos de seletores CSS.
+
+## 6. Perguntas
+Em caso de dúvidas sobre novas classes ou padrões visuais, pergunte antes de prosseguir.
