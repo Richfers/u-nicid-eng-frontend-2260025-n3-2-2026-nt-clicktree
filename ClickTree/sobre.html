@@ -1,5 +1,3 @@
-<!doctype html>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-BR">
  <head>
@@ -23,7 +21,7 @@
    <p>
     Uma comunidade que cultiva um futuro melhor.
    </p>
-   <div aria-label="Ferramentas de acessibilidade" class="access-tools">
+   <div aria-label="Ferramentas de acessibilidade" class="access-tools" role="group">
     <span>
      Acessibilidade
     </span>
@@ -33,7 +31,7 @@
     <button aria-label="Aumentar fonte" id="font-plus" type="button">
      A+
     </button>
-    <button id="contrast-toggle" type="button">
+    <button aria-pressed="false" id="contrast-toggle" type="button">
      Alto contraste
     </button>
    </div>
@@ -81,6 +79,7 @@
   <main id="conteudo">
    <section class="page-hero">
     <div class="wrap page-hero-inner">
+     <div class="page-hero-copy">
      <div class="breadcrumb">
       <a href="index.html">
        In&iacute;cio
@@ -96,13 +95,14 @@
      <p>
       Uma ideia simples: aproximar a participa&ccedil;&atilde;o digital do cuidado com a natureza.
      </p>
+     </div>
      <img alt="Ilustra&ccedil;&atilde;o de &aacute;rvores e vegeta&ccedil;&atilde;o" class="page-hero-image" loading="lazy" src="assets/nature-illustration.svg"/>
     </div>
    </section>
    <section class="wrap content">
     <div class="content-grid">
      <article class="card">
-      <span class="icon">
+      <span aria-hidden="true" class="icon">
        🌱
       </span>
       <h2>
@@ -113,7 +113,7 @@
       </p>
      </article>
      <article class="card">
-      <span class="icon">
+      <span aria-hidden="true" class="icon">
        🧭
       </span>
       <h2>
@@ -124,7 +124,7 @@
       </p>
      </article>
     </div>
-    <div class="cards" style="margin-top:1.2rem">
+    <div class="cards cards-offset">
      <article class="card">
       <h3>
        Miss&atilde;o
@@ -149,6 +149,48 @@
        Transpar&ecirc;ncia, responsabilidade, inclus&atilde;o, respeito &agrave; ci&ecirc;ncia e colabora&ccedil;&atilde;o.
       </p>
      </article>
+    </div>
+    <div class="block-offset">
+     <h2>
+      Por que as árvores são essenciais?
+     </h2>
+     <p>
+      As árvores sustentam a vida nas cidades e nos ambientes naturais. Elas ajudam a regular o clima, protegem a água e o solo, oferecem alimento e abrigo para a fauna e tornam os espaços onde vivemos mais saudáveis e agradáveis.
+     </p>
+     <div class="cards cards-offset">
+      <article class="card">
+       <h3>
+        Benefícios para o meio ambiente
+       </h3>
+       <ul>
+        <li>
+         Clima e qualidade do ar: Por meio da fotossíntese, as árvores absorvem dióxido de carbono e liberam oxigênio. A sombra e a evapotranspiração também ajudam a reduzir a temperatura do ambiente.
+        </li>
+        <li>
+         Água e solo: As copas interceptam parte da chuva e as raízes contribuem para a infiltração da água e a estabilidade do solo, ajudando a reduzir erosões e escoamentos intensos.
+        </li>
+        <li>
+         Menos ruído e poluição: A vegetação pode funcionar como barreira contra ruídos e contribuir para melhorar a qualidade ambiental dos espaços urbanos.
+        </li>
+       </ul>
+      </article>
+      <article class="card">
+       <h3>
+        Benefícios para as pessoas
+       </h3>
+       <p>
+        A arborização oferece sombra, conforto térmico e espaços mais agradáveis para caminhar, conviver e descansar. Árvores frutíferas também podem contribuir para a oferta de alimentos. Áreas verdes bem distribuídas favorecem a qualidade de vida e o bem-estar nas cidades.
+       </p>
+      </article>
+      <article class="card">
+       <h3>
+        Benefícios para os animais
+       </h3>
+       <p>
+        Árvores nativas e outras espécies adequadas oferecem alimento, abrigo e locais de reprodução para aves, insetos polinizadores e pequenos mamíferos. Quando áreas verdes são conectadas, podem formar corredores ecológicos que facilitam o deslocamento da fauna.
+       </p>
+      </article>
+     </div>
     </div>
    </section>
   </main>

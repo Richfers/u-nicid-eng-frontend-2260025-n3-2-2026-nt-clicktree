@@ -1,5 +1,3 @@
-<!doctype html>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-BR">
  <head>
@@ -23,7 +21,7 @@
    <p>
     Uma comunidade que cultiva um futuro melhor.
    </p>
-   <div aria-label="Ferramentas de acessibilidade" class="access-tools">
+   <div aria-label="Ferramentas de acessibilidade" class="access-tools" role="group">
     <span>
      Acessibilidade
     </span>
@@ -33,7 +31,7 @@
     <button aria-label="Aumentar fonte" id="font-plus" type="button">
      A+
     </button>
-    <button id="contrast-toggle" type="button">
+    <button aria-pressed="false" id="contrast-toggle" type="button">
      Alto contraste
     </button>
    </div>
@@ -81,6 +79,7 @@
   <main id="conteudo">
    <section class="page-hero">
     <div class="wrap page-hero-inner">
+     <div class="page-hero-copy">
      <div class="breadcrumb">
       <a href="index.html">
        In&iacute;cio
@@ -96,6 +95,7 @@
      <p>
       Impacto ambiental precisa ser compreens&iacute;vel, verific&aacute;vel e apresentado sem promessas que n&atilde;o possam ser comprovadas.
      </p>
+     </div>
      <img alt="Ilustra&ccedil;&atilde;o de &aacute;rvores e vegeta&ccedil;&atilde;o" class="page-hero-image" loading="lazy" src="assets/nature-illustration.svg"/>
     </div>
    </section>
@@ -127,7 +127,7 @@
       </p>
      </div>
     </div>
-    <div style="margin-top:2rem">
+    <div class="block-offset">
      <h2>
       Indicadores que fazem sentido
      </h2>
@@ -197,6 +197,256 @@
        </tbody>
       </table>
      </div>
+    </div>
+    <div class="block-offset">
+     <h2>
+      Dados: impactos e resultados
+     </h2>
+     <p>
+      Os números a seguir ajudam a dimensionar os efeitos do desmatamento, da falta de manejo preventivo e das ações de conservação. Os períodos e as fontes estão indicados para contextualizar cada dado.
+     </p>
+     <h3>
+      Impactos do desmatamento e da falta de cuidado
+     </h3>
+     <div class="table-wrap">
+      <table>
+       <caption>
+        Indicadores informados no material de referência. Os valores não foram conferidos fora desse material e não são resultados do ClickTree.
+       </caption>
+       <thead>
+        <tr>
+         <th scope="col">
+          Indicador
+         </th>
+         <th scope="col">
+          Dado informado
+         </th>
+         <th scope="col">
+          Fonte indicada no material
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Desmatamento na Amazônia e no Cerrado (2019–2022)
+         </td>
+         <td>
+          78,9 mil km² desmatados, somando os dois biomas.
+         </td>
+         <td>
+          FGV/Ibre
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Impacto econômico global (2019–2022)
+         </td>
+         <td>
+          Perda estimada de R$ 1,22 trilhão associada ao aumento das emissões.
+         </td>
+         <td>
+          FGV/Ibre
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Quedas de árvores em São Paulo
+         </td>
+         <td>
+          Mais de 1.200 quedas nos quatro primeiros meses de 2016; mais de 1.600 no mesmo período de 2015.
+         </td>
+         <td>
+          CCOI / CicloVivo
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Desligamentos de energia em temporais (SP)
+         </td>
+         <td>
+          Mais de 90% teriam relação com quedas de árvores sobre a rede elétrica.
+         </td>
+         <td>
+          Instituto Acende Brasil / CNN
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Ilhas de calor urbano
+         </td>
+         <td>
+          Áreas sem arborização podem registrar temperaturas de 8 °C a 10 °C superiores às de áreas arborizadas.
+         </td>
+         <td>
+          G1 / Marca Ambiental
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Fiscalização de infrações contra a flora (2023–2026)
+         </td>
+         <td>
+          25.101 autos do Ibama, com R$ 11,8 bilhões em multas; 11,9 mil autos do ICMBio, com R$ 2,4 bilhões em multas.
+         </td>
+         <td>
+          Ministério do Meio Ambiente
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <h3>
+      Resultados do cuidado, da restauração e do combate ao desmatamento
+     </h3>
+     <div class="table-wrap">
+      <table>
+       <caption>
+        Resultados informados no material de referência, inclusive indicadores de 2025/2026 ainda pendentes de confirmação. Não são resultados do ClickTree.
+       </caption>
+       <thead>
+        <tr>
+         <th scope="col">
+          Indicador
+         </th>
+         <th scope="col">
+          Resultado informado
+         </th>
+         <th scope="col">
+          Fonte indicada no material
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Desmatamento na Amazônia (2025/2026)
+         </td>
+         <td>
+          Redução de 41,8%, com 3.335 km² registrados; o material classifica a taxa como a menor da série histórica desde 1988.
+         </td>
+         <td>
+          INPE / MMA
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Desmatamento no Cerrado (2025/2026)
+         </td>
+         <td>
+          Redução de 23,8%, com 5.516,69 km² registrados; o material classifica o valor como o menor da série do bioma.
+         </td>
+         <td>
+          INPE / MMA
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Área que deixou de ser desmatada (2023–2026 vs. 2019–2022)
+         </td>
+         <td>
+          22,3 mil km² preservados na Amazônia e no Cerrado.
+         </td>
+         <td>
+          FGV/Ibre
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Emissões evitadas
+         </td>
+         <td>
+          1,49 bilhão de toneladas de CO₂ que deixaram de ser emitidas.
+         </td>
+         <td>
+          FGV/Ibre
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Danos climáticos evitados
+         </td>
+         <td>
+          R$ 1,16 trilhão em danos evitados globalmente, dos quais até R$ 192 bilhões no Brasil.
+         </td>
+         <td>
+          FGV/Ibre
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Contribuição dos 'rios voadores'
+         </td>
+         <td>
+          Valor estimado de US$ 20 bilhões por ano para as chuvas que contribuem com a agricultura e o abastecimento.
+         </td>
+         <td>
+          FGV/Ibre
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Plantios acumulados por organizações
+         </td>
+         <td>
+          Mais de 40 milhões de mudas pela SOS Mata Atlântica; 3,7 milhões pelo IPÊ; mais de 270 mil pela Copaíba.
+         </td>
+         <td>
+          Organizações citadas
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="block-offset">
+     <h2>
+      Fontes indicadas no documento-base
+     </h2>
+     <p>
+      As referências abaixo correspondem às fontes indicadas no material de pesquisa utilizado para elaborar os textos. No arquivo-base recebido, elas aparecem identificadas por instituição ou veículo e título; os endereços eletrônicos não foram incluídos.
+     </p>
+     <ol start="7">
+      <li>
+       Marca Ambiental — “5 razões para plantar uma árvore”.
+      </li>
+      <li>
+       G1 SP — “Conheça as regras para plantar árvores e saiba como conseguir uma muda em SP”.
+      </li>
+      <li>
+       CNN Brasil — “Cuidar das árvores das grandes cidades é questão de urgência, dizem especialistas”.
+      </li>
+      <li>
+       Ética Ambiental — “Entenda a importância das árvores”.
+      </li>
+      <li>
+       Faculdade de Medicina da UFMG — “Falta de arborização compromete qualidade de vida”.
+      </li>
+      <li>
+       CicloVivo — “Falta de cuidados preventivos é principal causa de quedas de árvores”.
+      </li>
+      <li>
+       Vegan Business — “Instituições que trabalham para preservar as árvores”.
+      </li>
+      <li>
+       Agência Brasil — “Queda de desmatamento no Brasil gera R$ 1,16 trilhão à economia global”.
+      </li>
+      <li>
+       Ministério do Meio Ambiente e Mudança do Clima (MMA) / INPE — “Brasil alcança menores taxas de desmatamento da série histórica na Amazônia e no Cerrado”.
+      </li>
+      <li>
+       Prefeitura de São Paulo — “Saiba como conseguir mudas de árvores e solicitar plantio em sua calçada”.
+      </li>
+      <li>
+       UMAPAZ / Prefeitura de São Paulo / Urbia Parques — “Sobre a UMAPAZ”.
+      </li>
+      <li>
+       National Geographic Brasil — “São vários os projetos de plantio de árvores. Qual você deve apoiar?”.
+      </li>
+      <li>
+       ArborPro Brasil — “Manejo de árvores em ambientes urbanos e arboricultura”.
+      </li>
+     </ol>
     </div>
    </section>
   </main>

@@ -46,6 +46,10 @@ h3 {
     font-size:1.35rem;
     margin:.3rem 0 .6rem
 }
+.access-topics h2 {
+    font-size:1.35rem;
+    margin:.3rem 0 .6rem
+}
 p {
     color:var(--muted);
     margin:.4rem 0 1rem
@@ -62,6 +66,15 @@ button,a,.btn {
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {
     outline:3px solid var(--clay);
     outline-offset:3px
+}
+.btn:not(.secondary):focus-visible,
+.nav-cta:focus-visible {
+    outline:3px solid var(--white);
+    outline-offset:0;
+    box-shadow:0 0 0 6px var(--clay)
+}
+.click-panel a:focus-visible {
+    outline-color:var(--white)
 }
 .skip-link {
     position:absolute;
@@ -478,13 +491,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     grid-template-columns:1fr 1fr;
     gap:1.5rem
 }
-.feature-image {
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:16px;
-    background:var(--leaf)
-}
 .tag {
     display:inline-block;
     background:#e7eddc;
@@ -621,6 +627,7 @@ input:focus,select:focus,textarea:focus {
         transition:none!important
     }
 }
+/* Até 900px o menu vira botão. A altura de 360px do hero não vence: a regra solta de 470px vem depois. */
 @media(max-width:900px) {
     .site-header {
         flex-wrap:wrap
@@ -662,6 +669,7 @@ input:focus,select:focus,textarea:focus {
         grid-template-columns:1fr
     }
 }
+/* Até 600px esta grade pede 1 coluna, mas a query de 640px abaixo pede 2. O hero de 300px também perde para os 380px da query de 700px. */
 @media(max-width:600px) {
     .topbar {
         align-items:flex-start;
@@ -740,14 +748,6 @@ input:focus,select:focus,textarea:focus {
     padding:.65rem .85rem;
     border-radius:8px
 }
-.gallery-illustration img {
-    object-fit:contain;
-    padding:1.5rem;
-    background:#d9e8b8
-}
-.gallery-illustration:after {
-    display:none
-}
 .card-image {
     width:calc(100% + 3.2rem);
     max-width:none;
@@ -756,10 +756,20 @@ input:focus,select:focus,textarea:focus {
     margin:-1.6rem -1.6rem 1.25rem;
     border-radius:var(--radius) var(--radius) 0 0
 }
+/* Entre 601px e 640px a galeria fica com 2 colunas. Até 600px a query seguinte devolve 1 coluna. */
 @media(max-width:640px) {
     .gallery-grid {
         grid-template-columns:1fr 1fr
     }
+}
+/* Valor efetivo até 600px: 1 coluna. Acima de 640px permanecem 3 colunas. */
+@media(max-width:600px) {
+    .gallery-grid {
+        grid-template-columns:1fr
+    }
+}
+/* Os 190px desta query perdem para os 250px declarados depois. Até 600px a altura efetiva do quadro é 230px. */
+@media(max-width:640px) {
     .gallery-tile,.gallery-tile img {
         min-height:190px
     }
@@ -794,6 +804,7 @@ input:focus,select:focus,textarea:focus {
     max-height: 210px;
     object-fit: contain;
 }
+/* Até 700px esta é a última altura do hero: 380px. Acima de 700px permanece 470px. */
 @media (max-width: 700px)  {
     .page-hero-inner  {
         grid-template-columns: 1fr;
@@ -815,11 +826,11 @@ input:focus,select:focus,textarea:focus {
 
 /* ClickTree V1.2.2 — imagens editoriais da galeria */
 .gallery-tile { min-height: 250px; }
-.gallery-tile img { object-fit: cover; }
 .gallery-tile figcaption { display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; }
 .gallery-description { display: block; max-width: 42rem; padding: .55rem .75rem; border-radius: 8px; background: rgba(255,254,250,.94); color: #34483a; font-size: .88rem; line-height: 1.45; }
 .home-photo-section { padding-top: 2rem; padding-bottom: 3rem; }
 .home-photo-grid .gallery-tile { min-height: 210px; }
+/* Até 600px o quadro da galeria fica com 230px. Acima disso vale 250px. A grade inicial continua com 210px, por ser mais específica. */
 @media (max-width: 600px) { .gallery-tile { min-height: 230px; } .gallery-description { font-size: .82rem; } }
 
 
@@ -831,4 +842,29 @@ input:focus,select:focus,textarea:focus {
     .hero-art .note-one {
         left: 20px;
     }
+}
+.eyebrow-on-panel {
+    background:#e2ebd3
+}
+.text-link-on-panel {
+    color:#d9e8b8
+}
+.counter-aside {
+    text-align:right
+}
+.captcha-offset {
+    margin-top:1rem
+}
+.captcha-action {
+    margin-top:.6rem
+}
+.plus-price {
+    font:800 2.5rem Manrope;
+    color:var(--forest)
+}
+.block-offset {
+    margin-top:2rem
+}
+.cards-offset {
+    margin-top:1.2rem
 }
