@@ -1,0 +1,59 @@
+---
+description: Padrões de CSS e estilização para o ClickTree
+globs: ClickTree/assets/*.css
+alwaysApply: false
+---
+
+# CSS - ClickTree
+
+## 1. Objetivo
+Padronizar os estilos visuais do portal ClickTree, garantindo consistência, responsividade e conformidade com os requisitos do projeto.
+
+## 2. Contexto do projeto
+- Abordagem mobile-first com uso de variáveis globais em `:root`.
+- A folha de estilo do site é `ClickTree/assets/style.css`.
+
+## 3. Regras detalhadas
+- Utilize seletores limpos e utilize as variáveis definidas no `:root`.
+- Garanta que todos os elementos interativos possuam um estado de foco visível.
+- Mantenha a compatibilidade com a estrutura de responsividade do site.
+
+## 4. Exemplo
+```css
+/* Variáveis já definidas em assets/style.css */
+:root {
+  --forest: #214d3b;
+  --forest2: #163b2c;
+  --leaf: #d9e8b8;
+  --lime: #c9df91;
+  --paper: #f7f6ef;
+  --white: #fffefa;
+  --ink: #1f2e26;
+  --muted: #627168;
+  --line: #dce3d8;
+  --clay: #c76f4b;
+  --sun: #f0c96d;
+  --radius: 22px;
+  --text-scale: 1;
+}
+
+.btn {
+  background-color: var(--forest);
+  color: var(--white);
+  border-radius: var(--radius);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--clay);
+  outline-offset: 3px;
+}
+```
+
+## 5. Erros a evitar
+- Não utilize valores fixos de cores ou espaçamentos quando houver variáveis disponíveis.
+- Evite aninhamentos excessivos de seletores CSS.
+- Não invente variáveis como `--cor-primaria`; reutilize os nomes já definidos no `:root`.
+
+## 6. Perguntas
+Em caso de dúvidas sobre novas classes ou padrões visuais, pergunte antes de prosseguir.
