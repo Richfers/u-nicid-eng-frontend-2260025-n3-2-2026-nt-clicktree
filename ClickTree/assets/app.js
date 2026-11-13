@@ -12,25 +12,47 @@
         });
     }
 
-    let scale = Number(localStorage.getItem('ct-font-scale') || 1);
+    const readStorage = (key, fallback) => {
+        try {
+            const value = localStorage.getItem(key);
+            return value === null ? fallback : value;
+        } catch {
+            return fallback;
+        }
+    };
+
+    const writeStorage = (key, value) => {
+        try {
+            localStorage.setItem(key, value);
+            return true;
+        } catch {
+            return false;
+        }
+    };
+
+    let scale = Number(readStorage('ct-font-scale', '1'));
+    if (!Number.isFinite(scale)) {
+        scale = 1;
+    }
+    scale = Math.max(0.9, Math.min(1.25, Math.round(scale * 100) / 100));
     document.documentElement.style.setProperty('--text-scale', scale);
 
     const updateScale = (value) => {
         scale = Math.max(0.9, Math.min(1.25, Math.round(value * 100) / 100));
         document.documentElement.style.setProperty('--text-scale', scale);
-        localStorage.setItem('ct-font-scale', scale);
+        writeStorage('ct-font-scale', scale);
     };
 
     $('#font-plus')?.addEventListener('click', () => updateScale(scale + 0.1));
     $('#font-minus')?.addEventListener('click', () => updateScale(scale - 0.1));
 
     const contrast = $('#contrast-toggle');
-    if (localStorage.getItem('ct-contrast') === '1') {
+    if (readStorage('ct-contrast', '0') === '1') {
         document.body.classList.add('high-contrast');
     }
     contrast?.addEventListener('click', () => {
         document.body.classList.toggle('high-contrast');
-        localStorage.setItem('ct-contrast', document.body.classList.contains('high-contrast') ? '1' : '0');
+        writeStorage('ct-contrast', document.body.classList.contains('high-contrast') ? '1' : '0');
     });
 
     const contrastStyle = document.createElement('style');
@@ -38,7 +60,10 @@
     document.head.append(contrastStyle);
 
     // O contador é uma demonstração local, não uma comprovação de plantio real.
-    let clicks = Number(localStorage.getItem('ct-clicks') || 0);
+    let clicks = Number(readStorage('ct-clicks', '0'));
+    if (!Number.isFinite(clicks) || clicks < 0) {
+        clicks = 0;
+    }
     let trees = Math.floor(clicks / 1000);
     let sinceCaptcha = 0;
     let last = 0;
@@ -89,8 +114,8 @@
             status.textContent = 'Clique registrado neste navegador. O plantio real depende de validação e prestação de contas do projeto.';
         }
 
-        localStorage.setItem('ct-clicks', clicks);
         paint();
+        writeStorage('ct-clicks', clicks);
 
         if (sinceCaptcha >= 25) {
             clickBtn.disabled = true;
