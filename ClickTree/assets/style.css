@@ -46,6 +46,10 @@ h3 {
     font-size:1.35rem;
     margin:.3rem 0 .6rem
 }
+.access-topics h2 {
+    font-size:1.35rem;
+    margin:.3rem 0 .6rem
+}
 p {
     color:var(--muted);
     margin:.4rem 0 1rem

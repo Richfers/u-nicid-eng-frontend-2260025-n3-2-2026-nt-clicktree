@@ -47,12 +47,16 @@
     $('#font-minus')?.addEventListener('click', () => updateScale(scale - 0.1));
 
     const contrast = $('#contrast-toggle');
-    if (readStorage('ct-contrast', '0') === '1') {
+    const contrastOn = readStorage('ct-contrast', '0') === '1';
+    if (contrastOn) {
         document.body.classList.add('high-contrast');
     }
+    contrast?.setAttribute('aria-pressed', contrastOn ? 'true' : 'false');
     contrast?.addEventListener('click', () => {
         document.body.classList.toggle('high-contrast');
-        writeStorage('ct-contrast', document.body.classList.contains('high-contrast') ? '1' : '0');
+        const enabled = document.body.classList.contains('high-contrast');
+        contrast.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+        writeStorage('ct-contrast', enabled ? '1' : '0');
     });
 
     const contrastStyle = document.createElement('style');
@@ -83,7 +87,10 @@
     function paint() {
         if (count) count.textContent = clicks % 1000;
         if (treeCount) treeCount.textContent = trees;
-        if (progress) progress.style.width = `${(clicks % 1000) / 10}%`;
+        if (progress) {
+            progress.style.width = `${(clicks % 1000) / 10}%`;
+            progress.parentElement?.setAttribute('aria-valuenow', String(clicks % 1000));
+        }
         if (percent) percent.textContent = `${(clicks % 1000) / 10}%`;
     }
 
