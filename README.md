@@ -98,4 +98,4 @@ O contador não comprova árvore plantada. Os formulários não enviam mensagens
 
 ## Publicação
 
-O endereço associado ao projeto no material anterior é <https://clicktree-site.vercel.app>.
+O endereço associado ao projeto no material anterior é <https://clicktree-site.vercel.app>. O repositório informado é <https://github.com/Richfers/u-nicid-eng-frontend-2260025-n3-2-2026-nt-clicktree>. Esta documentação descreve os arquivos locais e não verifica se a cópia publicada está igual a eles.

@@ -1,5 +1,3 @@
-<!doctype html>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="pt-BR">
  <head>
@@ -23,7 +21,7 @@
    <p>
     Uma comunidade que cultiva um futuro melhor.
    </p>
-   <div aria-label="Ferramentas de acessibilidade" class="access-tools">
+   <div aria-label="Ferramentas de acessibilidade" class="access-tools" role="group">
     <span>
      Acessibilidade
     </span>
@@ -33,7 +31,7 @@
     <button aria-label="Aumentar fonte" id="font-plus" type="button">
      A+
     </button>
-    <button id="contrast-toggle" type="button">
+    <button aria-pressed="false" id="contrast-toggle" type="button">
      Alto contraste
     </button>
    </div>
@@ -81,6 +79,7 @@
   <main id="conteudo">
    <section class="page-hero">
     <div class="wrap page-hero-inner">
+     <div class="page-hero-copy">
      <div class="breadcrumb">
       <a href="index.html">
        In&iacute;cio
@@ -96,6 +95,7 @@
      <p>
       Notas de planejamento para colocar o projeto no ar com uma base t&eacute;cnica segura e acess&iacute;vel.
      </p>
+     </div>
      <img alt="Ilustra&ccedil;&atilde;o de &aacute;rvores e vegeta&ccedil;&atilde;o" class="page-hero-image" loading="lazy" src="assets/nature-illustration.svg"/>
     </div>
    </section>
@@ -126,7 +126,7 @@
       </p>
      </article>
     </div>
-    <div class="faq" style="margin-top:2rem">
+    <div class="block-offset faq">
      <h2>
       Antes do lan&ccedil;amento
      </h2>
