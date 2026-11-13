@@ -67,6 +67,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     outline:3px solid var(--clay);
     outline-offset:3px
 }
+.btn:not(.secondary):focus-visible,
+.nav-cta:focus-visible {
+    outline:3px solid var(--white);
+    outline-offset:0;
+    box-shadow:0 0 0 6px var(--clay)
+}
+.click-panel a:focus-visible {
+    outline-color:var(--white)
+}
 .skip-link {
     position:absolute;
     left:1rem;
@@ -764,6 +773,13 @@ input:focus,select:focus,textarea:focus {
     .gallery-grid {
         grid-template-columns:1fr 1fr
     }
+}
+@media(max-width:600px) {
+    .gallery-grid {
+        grid-template-columns:1fr
+    }
+}
+@media(max-width:640px) {
     .gallery-tile,.gallery-tile img {
         min-height:190px
     }
