@@ -1,171 +1,101 @@
-[# U-NICID-ENG-FRONTEND-2260025-N3-2-2026-NT-CLICKTREE
-<div align="center">
-
 # ClickTree
 
-### Portal educativo sobre sustentabilidade e reflorestamento
+O ClickTree é um site acadêmico de educação ambiental. Ele apresenta a importância das árvores, orientações de plantio, organizações citadas em um material de referência e dados informados por esse material. Também demonstra, no navegador, como uma participação digital pode ser registrada sem ser confundida com plantio real.
 
-Uma iniciativa acadêmica para informar, conscientizar e incentivar a participação da sociedade na preservação da natureza.
+O projeto foi desenvolvido no curso de Engenharia de Software da Universidade Cidade de São Paulo (UNICID).
 
-https://clicktree-site.vercel.app
+## Tecnologias
 
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Projeto%20Acadêmico-UNICID-214d3b?style=for-the-badge" alt="Projeto acadêmico UNICID">
-</p>
+O site usa somente HTML, CSS e JavaScript. Não há framework, banco de dados nem etapa de instalação. As fotografias das páginas são carregadas de endereços externos escritos no HTML. Os desenhos locais ficam em `ClickTree/assets/` e são arquivos SVG.
 
-</div>
+## Como abrir
 
----
+1. Abra a pasta `ClickTree`.
+2. Abra o arquivo `index.html` em um navegador atual, como Chrome, Firefox ou Edge.
 
-## Sobre o projeto
+Não é preciso instalar Python, Node.js ou outra ferramenta para ver o site. Um servidor local é opcional.
 
-O **ClickTree** é um portal web desenvolvido por estudantes de **Engenharia de Software da Universidade Cidade de São Paulo (UNICID)**. O projeto tem como propósito promover a sustentabilidade, ampliar a conscientização ambiental e incentivar ações de reflorestamento e preservação da natureza.
+O contador e as preferências de acessibilidade usam o armazenamento do próprio navegador. Se a página for aberta diretamente pelo arquivo, esses dados ficam associados a essa origem.
 
-A plataforma reúne conteúdos educativos sobre árvores, áreas verdes, reflorestamento, desmatamento, mudanças climáticas e responsabilidade ambiental. A experiência foi planejada para ser simples, intuitiva, responsiva e acessível para diferentes públicos.
+## Estrutura
 
-> **Proposta:** transformar informação em conscientização e conscientização em participação.
+```text
+.
+├── README.md
+├── .cursor/
+│   └── rules/
+│       ├── html-semantico.mdc
+│       └── css-estilo.mdc
+└── ClickTree/
+    ├── index.html
+    ├── sobre.html
+    ├── projetos.html
+    ├── impacto.html
+    ├── noticias.html
+    ├── galeria.html
+    ├── midia.html
+    ├── orcamento_hospedagem.html
+    ├── acessibilidade.html
+    ├── contato.html
+    ├── assets/
+    │   ├── style.css
+    │   ├── app.js
+    │   ├── favicon.svg
+    │   ├── tree.svg
+    │   └── nature-illustration.svg
+    └── docs/
+        └── conteudo-a-ser-inserido-no-site/
+            └── Conteúdo para ClickTree.docx
+```
 
-## Objetivo geral
+As regras em `.cursor/rules/` orientam a edição no Cursor. O navegador não precisa delas para exibir o site.
 
-Desenvolver um portal web educativo, intuitivo e acessível, composto por dez páginas HTML5 interligadas. O portal compartilha informações sobre sustentabilidade, reflorestamento e preservação ambiental, além de incentivar a participação da sociedade em ações que contribuam para a recuperação de áreas degradadas, a redução dos impactos ambientais e a melhoria da qualidade de vida.
+## Páginas
 
-## Objetivos específicos
+O menu principal liga Início, O projeto, Projetos, Impacto, Notícias, Galeria, Acessibilidade e Contato. Mídia e Orçamento existem, mas não aparecem nesse menu: abra os arquivos correspondentes diretamente.
 
-- Demonstrar a importância das árvores e das áreas verdes para o equilíbrio ambiental.
-- Explicar a contribuição do reflorestamento para a qualidade do ar e para a fotossíntese.
-- Conscientizar sobre os impactos do desmatamento e das mudanças climáticas.
-- Incentivar ações de plantio e preservação de árvores.
-- Compartilhar conteúdos educativos sobre sustentabilidade e responsabilidade ambiental.
-- Apresentar maneiras simples de colaborar com a recuperação de áreas degradadas.
-- Incentivar hábitos sustentáveis no dia a dia.
-- Oferecer uma plataforma simples e acessível para diferentes públicos.
-- Organizar o conteúdo em páginas HTML5 conectadas por uma navegação clara.
-- Utilizar recursos visuais e informativos para facilitar a compreensão dos temas ambientais.
-- Estimular o envolvimento em iniciativas de preservação da natureza.
-- Contribuir para a formação de uma consciência ambiental voltada às futuras gerações.
+| Página | Arquivo | Função |
+| --- | --- | --- |
+| Início | `ClickTree/index.html` | Apresenta o projeto, um aviso de que se trata de um protótipo fictício, uma faixa de fotos e o contador demonstrativo. |
+| Sobre | `ClickTree/sobre.html` | Explica a origem, a missão, a visão e os valores do ClickTree, e acrescenta os benefícios das árvores descritos no material oficial. |
+| Projetos | `ClickTree/projetos.html` | Mostra três frentes ilustrativas do projeto e, em seção separada, sete organizações citadas no material de referência. Essas organizações não são apresentadas como parceiras do ClickTree. |
+| Impacto | `ClickTree/impacto.html` | Diferencia cliques, mudas e sobrevivência. Mantém uma tabela-modelo e publica duas tabelas com indicadores informados no material, além das fontes 7 a 19, sem endereços. |
+| Notícias | `ClickTree/noticias.html` | Reúne três chamadas educativas e o passo a passo de plantio consciente, inclusive as orientações municipais ainda pendentes de confirmação. |
+| Galeria | `ClickTree/galeria.html` | Organiza fotografias com legenda. Em telas de até 600 px a grade fica em uma coluna. |
+| Mídia | `ClickTree/midia.html` | Reserva espaços para vídeo, áudio e mapa. Esses conteúdos ainda não estão publicados. |
+| Orçamento e hospedagem | `ClickTree/orcamento_hospedagem.html` | Registra notas de planejamento técnico e respostas sobre o que o protótipo ainda não faz. |
+| Acessibilidade | `ClickTree/acessibilidade.html` | Explica teclado, tamanho do texto, contraste e outras orientações de uso. |
+| Contato | `ClickTree/contato.html` | Oferece um formulário de demonstração. O envio não chega a um serviço externo. |
 
-## Conteúdo do portal
+O texto oficial usado nas páginas Sobre, Projetos, Impacto e Notícias está em `ClickTree/docs/conteudo-a-ser-inserido-no-site/Conteúdo para ClickTree.docx`. Os indicadores de 2025/2026 e os procedimentos municipais foram copiados desse documento e ainda precisam ser conferidos nas fontes originais.
 
-| Página | Descrição |
-|---|---|
-| **Início** | Apresentação do ClickTree e acesso às principais áreas do portal. |
-| **O projeto** | Proposta, contexto e objetivos da plataforma. |
-| **Projetos** | Iniciativas relacionadas à preservação e à recuperação ambiental. |
-| **Impacto** | Transparência, participação e impacto ambiental. |
-| **Notícias** | Conteúdos e novidades sobre sustentabilidade. |
-| **Galeria** | Imagens e materiais visuais sobre natureza e reflorestamento. |
-| **Acessibilidade** | Recursos e orientações para facilitar o acesso ao conteúdo. |
-| **Contato** | Canal de comunicação com a equipe do projeto. |
-| **Mídia** | Materiais complementares e conteúdos de apoio. |
-| **Orçamento de hospedagem** | Informações sobre a infraestrutura de publicação do portal. |
+## Arquivos de estilo e comportamento
+
+`ClickTree/assets/style.css` é a única folha de estilo. Ela define as cores, a tipografia, o menu, os cartões, a galeria, as tabelas, os formulários e as adaptações de largura.
+
+`ClickTree/assets/app.js` é o único script. Ele controla o menu em telas menores, o tamanho do texto, o alto contraste, o contador, a verificação periódica de cliques e a resposta dos formulários de demonstração. As preferências ficam nas chaves `ct-font-scale`, `ct-contrast` e `ct-clicks`.
 
 ## Funcionalidades
 
-- Navegação entre dez páginas HTML5 por meio de menu unificado.
-- Layout responsivo para computadores, tablets e celulares.
-- Ajuste de tamanho da fonte.
-- Modo de alto contraste.
-- Link para pular diretamente ao conteúdo principal.
-- Navegação organizada e compatível com teclado.
-- Contador demonstrativo de participação.
-- Elementos visuais relacionados à sustentabilidade e ao reflorestamento.
-- Conteúdo organizado para facilitar a leitura e a compreensão.
+- Navegação entre as páginas do menu e link para pular ao conteúdo.
+- Menu que passa a ser aberto por botão quando a largura chega a 900 px.
+- Botões para aumentar ou diminuir o texto, entre 90% e 125%, com a escolha guardada no navegador.
+- Alto contraste, também guardado no navegador.
+- Indicação visual de foco para teclado.
+- Contador local de cliques, barra de progresso e uma conta simples depois de 25 cliques na mesma visita.
+- Validação dos formulários no navegador, sem envio externo.
 
-> O contador de participação é demonstrativo. Os dados são armazenados somente no navegador do usuário e não representam árvores efetivamente plantadas.
+O contador não comprova árvore plantada. Os formulários não enviam mensagens. A página de Mídia não contém vídeo, podcast nem mapa funcionando.
 
-## Tecnologias utilizadas
+## Manutenção
 
-- **HTML5** — estrutura e organização das páginas.
-- **CSS3** — estilos, responsividade e identidade visual.
-- **JavaScript** — interações e recursos de acessibilidade.
-- **SVG** — elementos gráficos e ilustrações.
-- **Git e GitHub** — versionamento e hospedagem do código.
-- **Railway** — publicação do site estático.
+- Altere o visual em `ClickTree/assets/style.css` e o comportamento em `ClickTree/assets/app.js`.
+- Mantenha uma única declaração `<!DOCTYPE html>` na primeira linha de cada página.
+- Conserve o aviso da página inicial: o ClickTree é um projeto hipotético.
+- Ao incluir um número do material oficial, conserve a fonte indicada no documento e não o apresente como resultado do ClickTree.
+- Não trate as organizações citadas como parceiras do projeto.
+- As regras de `.cursor/rules/` descrevem o padrão de HTML semântico e de CSS usado na edição.
 
-## Estrutura do projeto
+## Publicação
 
-```text
-ClickTree/
-├── index.html
-├── acessibilidade.html
-├── contato.html
-├── galeria.html
-├── impacto.html
-├── midia.html
-├── noticias.html
-├── orcamento_hospedagem.html
-├── projetos.html
-├── sobre.html
-└── assets/
-    ├── app.js
-    ├── favicon.svg
-    ├── style.css
-    └── tree.svg
-```
-
-## Como executar localmente
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/italomoreira82-afk/U-NICID-ENG-FRONTEND-2260025-N3-2-2026-NT-CLICKTREE.git
-```
-
-### 2. Acesse a pasta do projeto
-
-```bash
-cd U-NICID-ENG-FRONTEND-2260025-N3-2-2026-NT-CLICKTREE/ClickTree
-```
-
-### 3. Inicie um servidor local
-
-```bash
-python3 -m http.server 8000
-```
-
-### 4. Abra no navegador
-
-Acesse:
-
-```text
-http://localhost:8000
-```
-
-## Publicação no Railway
-
-Para publicar o projeto no Railway:
-
-1. Conecte o repositório do GitHub ao Railway.
-2. Configure `ClickTree` como o **Root Directory** do serviço.
-3. Deixe o **Build Command** vazio.
-4. Caso o Railway não detecte automaticamente o servidor, use o comando:
-
-```bash
-npx serve -s . -l $PORT
-```
-
-5. Gere o domínio público do serviço nas configurações de rede do Railway.
-
-## Contexto acadêmico
-
-O ClickTree foi desenvolvido como uma iniciativa acadêmica por estudantes de Engenharia de Software da UNICID. O projeto aplica conhecimentos de desenvolvimento web, estruturação de páginas HTML5, acessibilidade, design responsivo, organização de conteúdo e conscientização ambiental.
-
-## Equipe
-
-Projeto desenvolvido por estudantes de **Engenharia de Software — UNICID**.
-
-## Licença
-
-Este projeto foi desenvolvido para fins acadêmicos e educacionais.
-
-<div align="center">
-
----
-
-**ClickTree — tecnologia, participação e cuidado com a natureza.**
-
-</div>
-
+O endereço associado ao projeto no material anterior é <https://clicktree-site.vercel.app>. O repositório informado é <https://github.com/Richfers/u-nicid-eng-frontend-2260025-n3-2-2026-nt-clicktree>. Esta documentação descreve os arquivos locais e não verifica se a cópia publicada está igual a eles.
